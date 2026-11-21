@@ -2,6 +2,7 @@ import wattWiseImage from '../assets/WattWise.png'
 import sasSboImage from '../assets/SAS-SBO.png'
 import ifindImage from '../assets/ifind.jpeg'
 import eduProfileImage from '../assets/EduProfile.jpeg'
+import targaryenQuestImage from '../assets/House-of-the-Dragon-Targaryen-Quest.jpeg'
 
 const projects = [
   {
@@ -52,6 +53,63 @@ const projects = [
       'I helped build the user interface and develop features for the SAS-SBO Android app. I also tested all app functions, with particular attention to how the app verified students by scanning their QR codes.',
     category: 'Android Application',
     technologies: ['Android', 'Firebase', 'Cloud Firestore', 'CameraX', 'Google ML Kit'],
+  },
+  {
+    number: '05',
+    name: 'House of the Dragon: Targaryen Quest',
+    image: targaryenQuestImage,
+    imagePosition: 'center',
+    title: 'A 2D Platformer Game / Desktop Application',
+    description:
+      'A Java-based 2D side-scrolling platformer featuring character combat, animated enemies, interactive levels, and boss battles.',
+    contribution:
+      'Exact individual responsibilities for this group project have not been provided. Add Dexter Ian E. Peralta’s specific responsibilities here when available.',
+    category: 'Game Development / Java',
+    technologies: ['Java', 'Object-Oriented Programming (OOP)', 'Data Structures and Algorithms (DSA)', 'Eclipse IDE', '2D Game Development'],
+    year: '2024',
+    course: 'IT123 — Object-Oriented Programming',
+    developmentType: 'Collaborative Academic Project',
+    overview:
+      'A 2D platformer inspired by medieval fantasy settings, created as an academic project to demonstrate Java programming and Object-Oriented Programming principles.',
+    objective:
+      'Apply classroom knowledge of OOP, data structures, algorithms, and software development to create an interactive game with working gameplay mechanics.',
+    features: [
+      '2D Side-Scrolling Gameplay',
+      'Character Movement and Combat',
+      'Enemy AI and Boss Battles',
+      'Collision Detection',
+      'Level Management',
+      'Sprite Animation',
+      'Game State Management',
+      'Sound and Game Settings',
+    ],
+    challenges: [
+      'Character sprite integration',
+      'Animation consistency',
+      'Collision detection',
+      'Enemy interactions',
+      'Level progression',
+      'Debugging gameplay mechanics',
+    ],
+    lessons: [
+      'Applying object-oriented design to practical software development',
+      'Organizing code into reusable classes',
+      'Implementing gameplay mechanics',
+      'Debugging and iterative testing',
+      'Collaborating with a development team',
+    ],
+    team: [
+      'Dexter Ian E. Peralta',
+      'Angelie Marie B. Dinawanao',
+      'Joanna Nicole P. Yroy',
+    ],
+    gallery: [
+      {
+        src: targaryenQuestImage,
+        alt: 'House of the Dragon: Targaryen Quest main menu title screen',
+        label: 'Main Menu / Title Screen',
+      },
+    ],
   },
 ]
 

@@ -464,25 +464,97 @@ export default function App() {
             </div>
             <div className="project-dialog-body">
               {selectedProject.image && (
-                <div className="project-dialog-image">
-                  <img
-                    src={selectedProject.image}
-                    alt={`${selectedProject.name} project screenshot`}
-                  />
+                <div className="project-dialog-media">
+                  {selectedProject.gallery?.length ? (
+                    <div className="project-gallery" aria-label="Project screenshots">
+                      {selectedProject.gallery.map((image) => (
+                        <figure key={image.label}>
+                          <div className="project-dialog-image">
+                            <img src={image.src} alt={image.alt} />
+                          </div>
+                          <figcaption>{image.label}</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="project-dialog-image">
+                      <img
+                        src={selectedProject.image}
+                        alt={`${selectedProject.name} project screenshot`}
+                      />
+                    </div>
+                  )}
                 </div>
               )}
               <div className="project-dialog-content">
                 <BlurText as="p" text={selectedProject.category} className="project-dialog-category" />
                 <BlurText as="h2" text={selectedProject.name} className="project-dialog-heading" id="project-dialog-title" />
                 <BlurText as="p" text={selectedProject.title} className="project-dialog-title" />
+                {selectedProject.year && (
+                  <BlurText
+                    as="p"
+                    text={`${selectedProject.year} · ${selectedProject.course} · ${selectedProject.developmentType}`}
+                    className="project-dialog-meta"
+                  />
+                )}
                 <div>
                   <BlurText as="h3" text="Overview" />
-                  <BlurText as="p" text={selectedProject.description} animateBy="block" />
+                  <BlurText
+                    as="p"
+                    text={selectedProject.overview || selectedProject.description}
+                    animateBy="block"
+                  />
                 </div>
+                {selectedProject.objective && (
+                  <div>
+                    <BlurText as="h3" text="Problem / Objective" />
+                    <BlurText as="p" text={selectedProject.objective} animateBy="block" />
+                  </div>
+                )}
+                {selectedProject.features?.length > 0 && (
+                  <div>
+                    <BlurText as="h3" text="Key Features" />
+                    <ul className="project-detail-list">
+                      {selectedProject.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div>
                   <BlurText as="h3" text="My contribution" />
                   <BlurText as="p" text={selectedProject.contribution} animateBy="block" />
                 </div>
+                {selectedProject.challenges?.length > 0 && (
+                  <div>
+                    <BlurText as="h3" text="Development Challenges" />
+                    <ul className="project-detail-list">
+                      {selectedProject.challenges.map((challenge) => (
+                        <li key={challenge}>{challenge}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {selectedProject.lessons?.length > 0 && (
+                  <div>
+                    <BlurText as="h3" text="Lessons Learned" />
+                    <ul className="project-detail-list">
+                      {selectedProject.lessons.map((lesson) => (
+                        <li key={lesson}>{lesson}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {selectedProject.team?.length > 0 && (
+                  <div>
+                    <BlurText as="h3" text="Project Team" />
+                    <ul className="project-team-list">
+                      {selectedProject.team.map((member) => (
+                        <li key={member}>{member}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div>
                   <BlurText as="h3" text="Tech stack" />
                   <ul className="project-technologies" aria-label="Technologies">

@@ -239,6 +239,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .project-dialog-title { margin:10px 0 26px; color:var(--accent); font-size:14px; line-height:1.5; }
 .project-dialog-content h3 { margin:18px 0 7px; color:var(--accent); font-size:9px; text-transform:uppercase; letter-spacing:.14em; }
 .project-dialog-content p { margin:0; color:var(--muted); font-size:14px; line-height:1.75; }
+.project-dialog-meta { color:var(--muted) !important; font-size:12px !important; margin:0 0 18px !important; }
+.project-detail-list,.project-team-list {
+  margin:0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.7;
+}
+.project-team-list { list-style:none; padding-left:0; }
+.project-detail-list li,.project-team-list li { margin:4px 0; }
+.project-dialog-media { min-height:520px; border-right:1px solid var(--line); background:var(--background); }
+.project-gallery { display:flex; flex-direction:column; gap:12px; padding:12px; }
+.project-gallery figure { margin:0; }
+.project-gallery figcaption {
+  padding:9px 2px 2px; color:var(--muted); font-size:9px;
+  text-transform:uppercase; letter-spacing:.14em;
+}
+.project-gallery .project-dialog-image {
+  min-height:0; height:auto; aspect-ratio:16 / 10;
+  border:1px solid var(--line); border-right:1px solid var(--line);
+}
 .project-dialog-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
 
 .skills { display:grid; grid-template-columns:.9fr 1.1fr; gap:8vw; background:var(--deep-burgundy); }
@@ -389,6 +406,9 @@ footer div { display:flex; gap:28px; }
   .project-dialog-image {
     height:auto; min-height:0; aspect-ratio:16 / 10;
     border-right:0; border-bottom:1px solid var(--line);
+  }
+  .project-dialog-media {
+    min-height:0; border-right:0; border-bottom:1px solid var(--line);
   }
   .project-dialog-content { overflow:visible; padding:22px 18px 28px; }
   .project-dialog h2 { font-size:40px; }

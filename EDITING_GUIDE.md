@@ -59,3 +59,20 @@ npm run build
 ```
 
 Client-side Formspree form IDs and endpoints are public. Never place private credentials in this project. Verify one real submission after deployment and confirm email notifications and Formspree dashboard entries before announcing that the form is live.
+
+## Adding or editing project details
+
+Project cards and View Details content are maintained in `src/data/projects.js`. The existing project fields include `number`, `name`, `image`, `title`, `description`, `category`, `technologies`, `contribution`, and `links`.
+
+Additional optional fields can provide a richer details page:
+
+- `overview`, `objective`, `features`, `challenges`, `lessons`, `team`, and `gallery`
+- `year`, `course`, and `developmentType`
+- `gallery` entries require `src`, `alt`, and `label`
+
+For House of the Dragon: Targaryen Quest:
+
+- The supplied title-screen screenshot is stored at `src/assets/House-of-the-Dragon-Targaryen-Quest.jpeg`.
+- Replace or add gallery images in `src/assets` and update the project's `gallery` array in `src/data/projects.js`.
+- Update the `contribution` field only after confirming Dexter Ian E. Peralta’s exact individual responsibilities.
+- Do not add GitHub or download links until a verified public URL is available.
